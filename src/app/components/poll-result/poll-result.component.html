@@ -1,0 +1,26 @@
+<div class="container" *ngIf="poll!=null">
+    <h1>{{poll.title}}</h1>
+    <div class="description" *ngIf="poll.description!=null">
+        <span>{{poll.description}}</span>
+    </div>
+    <div class="pie">
+        <ngx-charts-pie-chart
+            [results]="data"
+            [view]="[400,400]"
+            [labels]="true"
+        >
+        </ngx-charts-pie-chart>
+
+        <ngx-charts-bar-horizontal
+        [results]="data"
+        [view]="[400,400]"
+        
+        >
+        </ngx-charts-bar-horizontal>
+    </div>
+    <div class="back">
+        <a href="poll/{{poll.id}}">Back to Poll</a>
+    </div>
+
+
+</div>

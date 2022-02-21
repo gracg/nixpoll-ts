@@ -1,0 +1,69 @@
+@import "../../../variables.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary2;
+    width: 60rem;
+    max-width: 100%;
+    min-height: 40rem;
+    height: auto;
+    border-radius: 10px;
+    padding: 1rem;
+    color: $textcolor1;
+
+    border-radius: 10px;
+    border-top: 3px solid #767F8C;
+
+    .description {
+        span {
+            color: #b9bbbe;
+            font-style: italic;
+        }
+    }
+
+    .pie {
+
+        ngx-charts-pie-chart::ng-deep  {
+            text {
+                fill: white;
+                font-size: 1rem;
+            }
+        }
+
+        ngx-charts-pie-chart {
+            ngx-charts-chart {
+                .ngx-charts-outer {
+                    svg {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        
+                        g {
+                            min-width: 100%;
+                            min-height: 100%;
+                            transform: translate(800,800);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .back {
+        border-radius: 10px;
+        display: flex;
+        align-items: stretch;
+        background-color: $logocolor;
+        color: white;
+        text-decoration: none;
+        a {
+            padding: 1rem 2rem;
+            display: block;
+            text-decoration: inherit;
+            color: inherit;
+        }
+    }
+}

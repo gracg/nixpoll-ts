@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Create a Poll</h1>
+
+    <div class="form">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+            <div class="field">
+                <label>Title</label>
+               <!-- <label class="invalid" *ngIf="isTitleInvalid()==true && form.controls['title'].touched && form.controls['title'].invalid">Title cannot be empty</label>
+               -->  <label class="invalid"  *ngIf="!isTitleValid()">Title cannot be empty</label>
+
+                <input formControlName="title" type="text"  (focusout)="titleClick()">
+
+            </div>
+
+            <div class="field">
+                <label>Description (optional)</label>
+                <input class="description" formControlName="description" type="text">
+            </div>
+
+            <label class="lab">Options (10 Max)</label>
+            <div formArrayName="options" class="options">
+                <div class="container" *ngFor="let option of getOptions().controls; let i=index">
+                        <input type="text" class="option" formControlName="{{i}}" (click)="addOption(i)" (keydown.Tab)="addOption(i)" >
+
+                </div>
+            </div>
+            
+            <button type="submit">Create Poll</button>
+
+
+
+        </form>
+    </div>
+    
+
+</div>

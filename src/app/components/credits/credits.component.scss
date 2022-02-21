@@ -1,0 +1,39 @@
+@import "../../../variables.scss";
+
+
+.container {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    
+
+    .card {
+        border-radius: 10px;
+        color: $textcolor1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 48rem;
+        background-color: $primary2;
+        border-top: 3px solid #767F8C;
+        gap: 1rem;
+
+        margin-bottom: 2rem;
+        max-width: 90%;
+    }
+
+    a {
+        
+        background-color: $logocolor;
+        border-radius: 10px;
+        padding: 0.5rem 2rem;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+    
+    
+
+}

@@ -1,0 +1,105 @@
+@import "../../../variables.scss";
+
+.container {
+    display: flex;
+    background-color: $primary2;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .logo-cont {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        margin: 0.5rem 0.5rem;
+        margin-left: 1rem;
+        //margin-right: 2rem;
+        
+
+
+        a {
+            margin: 0;
+            padding: 0px;
+            img {
+                margin-right: 0.3rem;
+                max-width: 32;
+                max-height: 32;
+            }
+
+            .logotext {
+                color: $textcolor1;
+                font-size: 2rem;
+                font-weight: 600;
+                margin: 0px;
+            }
+        }
+
+        a:hover {
+            background-color: inherit;
+            
+        }
+
+    }
+
+    color: $textcolor1;
+    
+
+
+    a {
+        margin:0;
+        height: 100%;
+        padding: 1.1rem 1rem;
+        color: inherit;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 1.1rem;
+    }
+
+    a:hover {
+        background-color: $logocolor;
+        color: $textcolor1;
+    }
+
+
+    img  {
+        display: none;
+        margin-left: auto;
+        margin-right: 1rem;
+        max-width: 3.1rem;
+        max-height: 3.1rem;
+    }
+
+    .logo {
+        display: inline;
+    }
+
+    @media screen and (max-width:500px) {
+        .lk {
+            display: none;
+        }
+        .menu {
+            filter: invert(100%);
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    .break {
+        flex-basis: 100%;
+        height: 0px;
+    }
+
+    .collapsed {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            white-space: nowrap;
+            min-width: 1000%;
+            flex: 1 0 100%;
+            align-self: stretch;
+            flex-basis: 100%;
+            display: block;
+        }
+    }
+    
+}

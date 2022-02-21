@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    .poll {
+        max-width: 90%;
+        flex-shrink: 1;
+    }
+}

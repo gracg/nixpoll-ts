@@ -1,0 +1,11 @@
+<app-topbar></app-topbar>
+
+<div class="container">
+    <h1>Public Polls</h1>
+    <div class="cards" *ngIf="polls!=null">
+        <div class="card" *ngFor="let poll of polls" (click)="goToPoll(poll)">
+            <h2>{{poll.title}}</h2>
+            <span *ngIf="poll.description!=null" >{{poll.description}}</span>
+        </div>
+    </div>
+</div>

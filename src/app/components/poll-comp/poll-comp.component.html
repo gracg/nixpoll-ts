@@ -1,0 +1,23 @@
+<div class="container">
+        <h1 class="title" *ngIf="isPoll()">{{getTitle()}}</h1>
+        <div class="descriptionCont" *ngIf="isPoll()">
+            <span class="description">{{getDescription()}}</span>
+        </div>
+        <span class="choose">Choose one answer:</span>
+        <span class="error" *ngIf="false">Must select one option</span>
+
+
+        <form [formGroup]="form" *ngIf="isPoll()">
+            <div formArrayName="options" class="optionsCont">
+                <div class="cont" *ngFor="let option of getOptions().controls;let i=index">
+                    <input type="radio" name="op"  (click)="setVoteIndex(i)">
+                    <label for="{{i}}">{{optionStrArr[i]}}</label>
+                </div>
+            </div>
+
+            <button (click)="vote()">Vote</button>
+
+        </form>
+
+        
+</div>

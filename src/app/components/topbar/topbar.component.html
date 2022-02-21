@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="logo-cont">
+        
+        <a href="/">
+            <img class="logo" src="assets/logo/jewel32.png">
+            <span class="logotext">NixPoll</span>
+        </a>
+    </div>
+    <a class="create lk" href="/create">Create Poll</a>
+    <a class="create lk" href="/browse">Browse Polls</a>
+    <a class="create lk" href="/credit">Credits</a>
+
+    
+    <img class="menu" src="assets/nav-colapse.png" (click)="flip()">
+    <div class="break"></div>
+
+    <div class="collapsed" *ngIf="getIsCollapsed()==false">
+        <div class="break"></div>
+        <a class="create lk" href="/create">Create Poll</a>
+        <a class="create lk" href="/browse">Browse Polls</a>
+        <a class="create lk" href="/credit">Credits</a>
+
+    </div>
+
+
+</div>

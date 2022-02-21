@@ -1,0 +1,131 @@
+@import "../../../variables.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+    color: $textcolor1;
+    width: 48rem;
+    border-radius: 10px;
+    background-color: $primary2;
+
+    font-family: sans-serif;
+
+    .break {
+        flex-basis: 100%;
+        height: 1px;
+    }
+
+    .form {
+        display: flex;
+        align-self: flex-start;
+        width: 100%;
+        margin-bottom: 1rem;
+        
+
+        form {
+            width: inherit;
+        }
+
+        .field {
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap:0.5rem;
+            padding-right: auto;
+            width: 100%;
+            margin-bottom: 1rem;
+
+
+            label {
+                font-size: 1rem;
+                font-weight: 700;
+            }
+            
+            .invalid {
+                color:$logocolor;
+            }
+
+            input {
+                width: 90%;
+                height: 1.5rem;
+                background-color: $primary1;
+                border: 1px #232428 solid;
+                border-radius: 5px;
+                color:white
+            }
+
+            input:hover {
+                border: 1px white solid;
+            }
+
+            input:focus {
+                border-color: none;
+            }
+
+            .description {
+                height: 4rem;
+            }
+        }
+
+        .lab {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+
+        .options {
+            margin-top: 0.5rem;
+            max-width: 100%;
+
+            .container {
+                margin-left: 1rem;
+
+                
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                align-self: left;
+                max-width: 100%;
+                background-color: transparent;
+            
+                .option {
+                    gap: 0.5rem;
+
+                
+                    width: 90%;
+                    max-width: 100%;
+                    height: 1.5rem;
+                    background-color: $primary1;
+                    border: 1px #232428 solid;
+                    border-radius: 5px;
+                    color:white;
+                    margin-bottom: 0.5rem;
+
+                }
+            }
+        }
+
+        button {
+            margin-top: 1.5rem;
+            margin-left: 1rem;
+            color: $textcolor1;
+            font-weight: bolder;
+            background-color: $logocolor;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border:none;
+
+            cursor: pointer;
+        }
+ 
+    }
+
+    
+
+
+}
